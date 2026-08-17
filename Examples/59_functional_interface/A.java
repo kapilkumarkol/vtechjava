@@ -1,0 +1,5 @@
+// marker interface
+
+interface Abc {
+
+}

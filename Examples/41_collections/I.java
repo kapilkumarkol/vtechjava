@@ -1,0 +1,74 @@
+import java.util.HashMap;
+
+class A {
+    public static void main(String[] args) {
+        HashMap<Student,College> x = new HashMap<Student,College>();
+
+        x.put(new Student("om", 23), new College("JEC"));
+        x.put(new Student("ekta", 22), new College("LNCT"));
+        x.put(new Student("rohit", 19), new College("SRIT"));
+        x.put(new Student("mahendra", 18), new College("GGITS"));
+        x.put(new Student("amrendra", 21), new College("Global"));
+        x.put(new Student("rohit", 19), new College("Hitkarini"));
+
+        System.out.println(x);
+
+        Student y = new Student("amrendra", 21);
+        System.out.println(x.containsKey(y));
+    }
+}
+
+
+
+class Student {
+    String name;
+    int age;
+
+    Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String toString() {
+        return name + " - " + age;
+    }
+
+    public boolean equals(Object o) {
+        Student s1 = this;
+        Student s2 = (Student)o;
+
+        String nm1 = s1.name;
+        String nm2 = s2.name;
+
+        int ag1 = s1.age;
+        int ag2 = s2.age;
+
+        return nm1.equals(nm2) && ag1 == ag2;
+    }
+
+    public int hashCode() {
+        int sum = 0;
+
+        String abc = " abcdefghijklmnopqrstuvwxyz";
+
+        for(int i=0;i<name.length(); i++) {
+            sum = sum + abc.indexOf(name.charAt(i));
+        }
+
+        sum += age;
+
+        return sum;
+    }
+}
+
+class College {
+    String name;
+
+    College(String name) {
+        this.name = name;
+    }
+
+    public String toString() {
+        return name;
+    }
+}

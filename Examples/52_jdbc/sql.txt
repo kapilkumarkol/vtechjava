@@ -1,0 +1,11 @@
+create database schooldb;
+
+use schooldb;
+
+create table students 
+(
+    student_id int auto_increment primary key,
+    name varchar(30) not null,
+    school varchar(30) not null, 
+    contact varchar(10) not null
+);

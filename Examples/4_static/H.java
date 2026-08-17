@@ -1,0 +1,31 @@
+class Circle {
+    int radius;
+
+    static float pi = 3.14f;
+
+    public static void main(String[] args) {
+        Circle c1 = new Circle();
+        c1.radius = 23;
+
+        Circle c2 = new Circle();
+        c2.radius = 34;
+
+        c1.calcArea();
+        System.out.println(getPI());
+        
+        System.out.println(c1.getPI());
+        System.out.println(c2.getPI());
+    }
+
+    static void defineCircle() {
+        System.out.println("Circle is a ....");
+    }
+
+    static float getPI() {
+        return pi;
+    }
+
+    void calcArea() {
+        System.out.println(pi * radius * radius);        
+    }
+}

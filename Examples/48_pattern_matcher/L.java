@@ -1,0 +1,14 @@
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+class A {
+    public static void main(String[] args) {
+        Pattern p = Pattern.compile("\\d\\d");
+
+        Matcher m = p.matcher("machine length 15 inches and width 7 inches and height: 21");
+
+        while(m.find()) {
+            System.out.println("Match: "+m.group() + ", Start: " + m.start() + " End: " + m.end());
+        }
+    }
+}

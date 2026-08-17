@@ -1,0 +1,22 @@
+1.
+All library .class files (classes) are organized in a file called modules:
+
+C:\Program Files\Java\jdk-11.0.11\lib\modules
+
+2.
+All library .java files(Source code) are organized in a file called src.zip:
+
+C:\Program Files\Java\jdk-11.0.11\lib\src.zip
+
+create a copy of the zip file and extract in dedicated folder:
+and explore the source code...
+
+
+3.
+D:\javaprac\>javac A.java
+
+D:\javaprac\>java A
+D:\javaprac\>java -verbose A
+
+4.
+https://docs.oracle.com/en/java/javase/11/docs/api/

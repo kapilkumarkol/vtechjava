@@ -1,0 +1,30 @@
+class ARunnable implements Runnable {
+    public void run() {
+        // System.out.println("Hello");
+        for(int i=0;i<1000;i++) {
+
+        }
+    }
+}
+
+class A {
+    public static void main(String[] args) {
+        ThreadGroup ntg = new ThreadGroup("QUAD"); 
+
+        ARunnable r = new ARunnable();
+
+        Thread t1 = new Thread(ntg, r, "America");
+        Thread t2 = new Thread(ntg, r, "Bharat");
+        Thread t3 = new Thread(ntg, r, "Australia");
+        Thread t4 = new Thread(ntg, r, "Japan");
+
+        t1.start();
+        t2.start();
+        t3.start();
+        t4.start();
+
+        ntg.list();
+        System.out.println("++++++++++++++++++++");
+        Thread.currentThread().getThreadGroup().list();
+    }
+}

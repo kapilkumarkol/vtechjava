@@ -1,0 +1,42 @@
+Overriding:
+
+In a child class, you can re-define or re-implement a method, which 
+is inherited from it's parent class. The method version in child class
+is called overriding-method and the method defined in the parent class 
+is overridden-method.
+
+Child class is a specialized class version of it's parent class.
+
+Sub-class means an improved version of an existing class. To adopt changes 
+in an existing implementation, we create a sub-class. 
+All inheritable-members(methods/variables) of parent class are inherited by the sub-class.
+And that is why we say that the child class establishes IS-A relationship with the parent 
+class.
+
+Variable(properties of a class) and methods represent the state and behaviour of an object.
+A subclass inherits all inheritable members from it's parent class and claims IS-A relation 
+with parent. This way we can say that a child class is a copy of it's parent class with same 
+state and behaviour. 
+
+But the question is why we will create another copy? The answer is child class has permission
+to not only create new members, infact a child can reimplement(modify) an inherited method.
+
+Overriding is forced if overridden method is abstract.
+
+There are few rules when we override a method.
+
+1. Parametr body of overriding method must match with the overridden method's parameter body.
+   Count, Sequence and Type all must match.
+   (a smallest mismatch means the method is not overriding, instead overloading the inherited 
+   method).
+
+2. Overriding method's return type must match with the overridden method's return type:
+   a. is void
+   b. is primitive
+   In case of reference type:
+   an overriding method's return type can be same or sub.
+
+3. Access controll can be same or wider in an overriding method implementation. 
+
+4. Same, Narrower or fewer exception can be thown from an overrding method.
+   (We will discuss that in exception-handling chapter...)
